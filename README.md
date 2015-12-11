@@ -6,3 +6,4 @@
 
 
 # 图片内容
+![截屏](https://raw.githubusercontent.com/429329513wanting/RCTDemo/master/Simulator%20Screen%20Shot%202015%E5%B9%B412%E6%9C%8811%E6%97%A5%20%E4%B8%8B%E5%8D%884.26.05.png)
