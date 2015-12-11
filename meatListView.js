@@ -1,8 +1,9 @@
 'use strict';
 var React = require('react-native');
-var TCell = require('./cell')
 //var HTTPURL = 'http://www.zhcc717.com/market/mobile/index.do';
-var HTTPURL = 'http://platform.sina.com.cn/sports_all/client_api?app_key=3571367214&_sport_t_=football&_sport_s_=opta&_sport_a_=teamOrder&type=213&season=2015&format=json';
+var API = require('./API/API');
+var MCell = require('./meatCell');
+
 
 var {
 	Text,
@@ -14,8 +15,8 @@ var {
 
 } = React;
 
-
-var listView = React.createClass({
+var CACHE = [];
+var meatListView = React.createClass({
 
 	getInitialState:function(){
 
@@ -34,19 +35,72 @@ var listView = React.createClass({
 
 	fetchData:function(){
 
-		fetch(HTTPURL).then((response) => response.json()).then((responseData) => {
+		var type = this.props.type
+		if (type == 'meat') {
 
-		
+		fetch('http://www.zhcc717.com/market/mobile/goodsList.do',{
+		method:'POST',
+	    headers:{"Content-Type":"application/json"},
+	    body:"oid=f2573e864e49d503014e58c1d18a017b&order=asc&orderType=0&pageNumber=1&pageSize=20"})
 
-			this.setState({
+		   .then((response) => response.json())
 
-				dataSource:this.state.dataSource.cloneWithRows(responseData.result.data),
-				loaded:true,
+		   .catch((error) => {React.AlertIOS.alert('error','请求失败:'+error.message);return;})
 
-			});
+		   .then((responseData) => {
+
+		   	   this.cache(responseData.goodsList)
+
+		   	   console.log(responseData)
+		   	    this.setState({
+
+				    dataSource:this.state.dataSource.cloneWithRows(responseData.goodsList),
+				    loaded:true,
+			      });
+
 		})
 		.done();
+
+
+		}else{
+
+		fetch('http://www.zhcc717.com/market/mobile/goodsList.do',{
+		method:'POST',
+	    headers:{"Content-Type":"application/json"},
+	    body:"oid=f2573e864e49d503014e58c10c170165&order=asc&orderType=0&pageNumber=1&pageSize=20"})
+
+		   .then((response) => response.json())
+
+		   .catch((error) => {React.AlertIOS.alert('error','请求失败:'+error.message);return;})
+
+		   .then((responseData) => {
+
+		   	   this.cache(responseData.goodsList)
+
+		   	   console.log(responseData)
+		   	    this.setState({
+
+				    dataSource:this.state.dataSource.cloneWithRows(responseData.goodsList),
+				    loaded:true,
+			      });
+
+		})
+		.done();
+
+
+		}
+
+
+
 	},
+
+	cache:function(items){
+
+		for (var i in items){
+			CACHE.push(items[i]);
+		}
+	},
+
 
 
 
@@ -67,21 +121,15 @@ var listView = React.createClass({
 	 
 	},
 	renderCell:function(data){
-		return(<TCell 
+	return(<MCell 
 			    onSelect={() => this.cellClick(data)}
 			    data={data}>
 			       
 
-			  </TCell>
+			  </MCell>
 
 			);
 
-
-
-	},
-	cellClick:function(data){
-
-		alert('click');
 
 
 
@@ -171,4 +219,4 @@ var styles = React.StyleSheet.create({
 		marginBottom:44,
 	},
 });
-module.exports = listView;
+module.exports = meatListView;

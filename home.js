@@ -11,6 +11,7 @@ var {
 } = React;
 
 var LiView = require('./listView');
+var MeatView = require('./meatListView');
 
 var homeView = React.createClass({
 
@@ -31,7 +32,7 @@ var homeView = React.createClass({
 			             <TouchableHighlight style={Style.button} underlayColor='#99d9f4'
 			                 onPress={this.btn1Click}>
 
-			             	  <Text style={{fontSize:25,color:'#000',}}>肉类</Text>
+			             	  <Text style={{fontSize:25,color:'#000',}}>产品</Text>
 
 			             </TouchableHighlight>
 			             
@@ -62,16 +63,23 @@ var homeView = React.createClass({
 	btn1Click(){
 
 		this.props.navigator.push({
-        title: '列表页',
+        title: '测试列表',
         component: LiView,
-        passProps: {}
+        passProps: {type:'shu'}
       });
 		
 	},
 
 	twoBtnClick(){
 
-		alert('two click');
+		this.props.navigator.push({
+        title: '蔬菜列表',
+        component: MeatView,
+        passProps: {type:'meati'}
+      });
+
+
+
 	}
 
 
