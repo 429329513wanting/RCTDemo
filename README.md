@@ -18,35 +18,25 @@
 # 图片内容
 
 
-* ##首页
-
-
+##首页
 
 ![截屏](https://raw.githubusercontent.com/429329513wanting/RCTDemo/master/home.png)
 
 
 
-* ##更多
 
-
-
-
+##更多
 ![截屏](https://raw.githubusercontent.com/429329513wanting/RCTDemo/master/more.png)
 
 
 
 
-* ##点击蔬菜
-
-
-
+##点击蔬菜
 
 ![蔬菜](https://raw.githubusercontent.com/429329513wanting/RCTDemo/master/Simulator%20Screen%20Shot%202015%E5%B9%B412%E6%9C%8811%E6%97%A5%20%E4%B8%8B%E5%8D%8811.07.13.png)
 
 
-* ##点击产品
-
-
+##点击产品
 
 
 ![产品](https://raw.githubusercontent.com/429329513wanting/RCTDemo/master/xx.png)
