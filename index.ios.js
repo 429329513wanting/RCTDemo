@@ -41,7 +41,7 @@ var HelloWorld = React.createClass({
               <NavigatorIOS style={styles.container}
                   tintColor={'#333344'}
                   initialRoute={{title:'首页',
-                                 component:require('./home.js')}
+                                 component:require('./more.js')}
                                }
                   itemWrapperStyle={styles.navigator}>
 
@@ -109,7 +109,7 @@ var HelloWorld = React.createClass({
               <NavigatorIOS style={styles.container}
                   tintColor={'#333344'}
                   initialRoute={{title:'更多',
-                                 component:require('./more.js')}
+                                 component:require('./home.js')}
                                }
                   itemWrapperStyle={styles.navigator}>
 
