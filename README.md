@@ -41,3 +41,7 @@
 
 ![产品](https://raw.githubusercontent.com/429329513wanting/RCTDemo/master/xx.png)
 
+
+##商品详情页
+![详情页](https://raw.githubusercontent.com/429329513wanting/RCTDemo/master/detail.png)
+
