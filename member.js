@@ -10,7 +10,7 @@ var {
 
 var Style = React.StyleSheet.create({
 	container: {
-		backgroundColor: '#eecc00',
+		backgroundColor: '#fff',
 		flex:1,
 		justifyContent: 'center',
 		alignItems: 'center'
@@ -24,7 +24,10 @@ var Style = React.StyleSheet.create({
 var memberView = React.createClass({
 	render:function(){
 
-		return <View style={Style.container}></View>
+		return (<View style={Style.container}>
+					<Text style={{fontSize:20}}> 敬请期待 </Text>
+		       </View>
+		       )
 
 
 	},

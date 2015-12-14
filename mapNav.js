@@ -4,25 +4,27 @@ var React = require('react-native');
 var {
 	Text,
 	View,
-	ListView,
 	ActivityIndicatorIOS
 } = React;
 
 var Style = React.StyleSheet.create({
 	container: {
-		backgroundColor: '#eeffcc',
+		backgroundColor: '#fff',
 		flex:1,
+		alignItems:'center',
+		justifyContent:'center',
 	},
-	listView: {
-		marginTop: 65,
-		marginBottom: 0
-	},
+
 });
 
 var mapView = React.createClass({
 	render:function(){
 
-		return <View style={Style.container}></View>
+		return (<View style={Style.container}>
+					<Text style={{fontSize:20}}> 敬请期待 </Text>
+
+		       </View>
+		       )
 
 
 	},

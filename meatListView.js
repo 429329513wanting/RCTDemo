@@ -3,6 +3,7 @@ var React = require('react-native');
 //var HTTPURL = 'http://www.zhcc717.com/market/mobile/index.do';
 var API = require('./API/API');
 var MCell = require('./meatCell');
+var GDetailView = require('./goodDetail');
 
 
 var {
@@ -131,6 +132,17 @@ var meatListView = React.createClass({
 			);
 
 
+
+
+	},
+	cellClick:function(data){
+
+		this.props.navigator.push({
+
+			title:'商品详情',
+			component:GDetailView,
+			passProps:{data:data},
+		})
 
 
 	},
