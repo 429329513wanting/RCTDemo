@@ -6,6 +6,7 @@
 # 参考的主要连接
 * **http://www.tuicool.com/articles/V3U3UbU**
 * **http://wiki.jikexueyuan.com/project/react-native/**
+* **https://github.com/jondot/awesome-react-native**
 
 ---
 
@@ -44,4 +45,8 @@
 
 ##商品详情页
 ![详情页](https://raw.githubusercontent.com/429329513wanting/RCTDemo/master/detail.png)
+
+
+##个人中心
+![个人中心](https://raw.githubusercontent.com/429329513wanting/RCTDemo/master/menu.png)
 
