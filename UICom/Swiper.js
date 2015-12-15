@@ -39,13 +39,14 @@ var swiper = React.createClass({
 var styles = React.StyleSheet.create({
 	wrapper:{
 
-		flex:1,
+	
 
 	},
 	head_container:{
 		flex:1,
 		justifyContent:'center',
 		alignItems:'center',
+
 	},
 	image_style:{
 

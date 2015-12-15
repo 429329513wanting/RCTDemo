@@ -1,6 +1,7 @@
 'use strict';
 var React = require('react-native');
 var Swiper = require('./UICom/Swiper');
+var HomeView = require('./home');
 
 var {
 	Text,
@@ -19,7 +20,7 @@ var moreView = React.createClass({
 
 		    <ScrollView style={styles.container}>
 
-		    	<Swiper style={{height:180}}></Swiper>
+		    	<Swiper style={{height:180,flex:1,}}></Swiper>
 
 		    	<View style={styles.menu_container}>
 
@@ -140,7 +141,6 @@ var moreView = React.createClass({
 		    			<Text style={styles.text_gray}>体验4G高速网络</Text>
 		    			<Image style={styles.icon} source={{uri:'http://p0.meituan.net/280.0/groupop/ba4422451254f23e117dedb4c6c865fc10596.jpg'}}></Image>
 
-
 		    		</View>
 		    		<View style={{flex:1,borderColor:'#eee',borderTopWidth:1,flexDirection:'column'}}>
 		    			<Text style={[styles.text_font]}>流量钱包</Text>
@@ -154,8 +154,6 @@ var moreView = React.createClass({
 		    			<Text style={[styles.text_font]}>话费券</Text>
 		    			<Text style={styles.text_gray}></Text>
 		    			<Image style={styles.icon_2} source={{uri:'http://p0.meituan.net/280.0/groupop/ba4422451254f23e117dedb4c6c865fc10596.jpg'}}></Image>
-
-
 
 		    		</View>
 
@@ -172,8 +170,6 @@ var moreView = React.createClass({
 		    			<Text style={styles.text_gray}>最多敢送100M</Text>
 		    			<Image style={styles.icon} source={{uri:'http://p0.meituan.net/280.0/groupop/ba4422451254f23e117dedb4c6c865fc10596.jpg'}}></Image>
 
-
-
 		    		</View>
 
 		    		<View style={{flex:1,borderColor:'#eee',borderLeftWidth:1,borderTopWidth:1}}>
@@ -181,8 +177,6 @@ var moreView = React.createClass({
 		    			<Text style={[styles.text_font]}>靓号自选</Text>
 		    			<Text style={styles.text_gray}>号码开户预约</Text>
 		    			<Image style={styles.icon} source={{uri:'http://p0.meituan.net/280.0/groupop/ba4422451254f23e117dedb4c6c865fc10596.jpg'}}></Image>
-
-
 
 		    		</View>
 
@@ -242,9 +236,13 @@ var moreView = React.createClass({
 
 	menuClick:function(){
 
-	alert('click')
+	    this.props.navigator.push({
 
-	}
+	    	title:'更多',
+	    	component:HomeView,
+	    })
+
+    }
 
 });
 

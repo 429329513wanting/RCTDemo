@@ -22,17 +22,11 @@ module.exports = React.createClass({
                     	<Text style={styles.year}>{good.specifications}</Text>
                 		</View>
 
-
                 	</View>
 
            </TouchableHighlight>
 				
 		);
-	},
-
-	cellClick:function(){
-
-		alert('click')
 	},
 
 	
