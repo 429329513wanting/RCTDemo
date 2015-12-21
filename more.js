@@ -20,7 +20,7 @@ var moreView = React.createClass({
 
 		    <ScrollView style={styles.container}>
 
-		    	<Swiper style={{height:180,flex:1,}}></Swiper>
+		    	<Swiper style={{height:180}}></Swiper>
 
 		    	<View style={styles.menu_container}>
 
