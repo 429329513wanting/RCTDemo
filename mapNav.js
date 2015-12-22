@@ -3,6 +3,8 @@ var React = require('react-native');
 var Saf = require('react-native-safari-view');
 var CusView = require('./UICom/CustomView');
 var CalView = require('./UICom/calendarView');
+var isClick = false;
+
 
 
 var {
@@ -39,9 +41,51 @@ var Style = React.StyleSheet.create({
 
 var mapView = React.createClass({
 
-	componentDidMount:function(){
+	getInitialState:function(){
+
+		return {isClick:false}
+	},
+
+	componentWillMount:function(){//将要插入真实dom
+		console.log('will mount');
 
 	},
+	componentDidMount:function(){//已经插入
+		console.log('did mount');
+
+
+	},
+	componentWillUnmount:function(){//将要移出真实dom
+		console.log('will uncomount');
+
+
+	},
+	componentWillUpdate:function(nextProps,nextState){//将要重新渲染
+		console.log('将要重新渲染');
+
+
+	},
+	componentDidUpdate:function(prevProps,prevState){//已经重新渲染
+		console.log('已经重新重新渲染');
+
+	},
+
+	componentWillReceiveProps:function(nextProps){
+
+		 console.log('已经加载组件收到新的参数时调用');
+
+	},
+	// shouldComponentUpdate:function(nextProps,nextState){
+	// 	 console.log('组件判断是否重新渲染时调用');
+	// 	 return nextProps.id !== this.props.id;
+
+
+	// },
+
+
+
+
+
 	render:function(){
 
 		return (<ScrollView style={Style.container}>
@@ -66,6 +110,13 @@ var mapView = React.createClass({
 
 						<TouchableHighlight underlayColor='#fff' onPress={this._calendarClick}>
 							<Text style={Style.font_16}>日历组件</Text>
+						</TouchableHighlight>
+
+					</View>
+					<View style={Style.item_style}>
+
+						<TouchableHighlight underlayColor='#fff' onPress={this._update}>
+							<Text style={Style.font_16}>{this.state.isClick?'clicked':'state改变刷新界面'}</Text>
 						</TouchableHighlight>
 
 					</View>
@@ -102,6 +153,14 @@ var mapView = React.createClass({
 			component:CalView,
 		})
 
+	},
+
+	_update(){
+
+
+        isClick = !isClick;
+
+		this.setState({isClick:isClick});
 	},
 	
 
