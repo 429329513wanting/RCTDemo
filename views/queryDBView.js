@@ -20,8 +20,7 @@ var styles = React.StyleSheet.create({
 	},
 	list:{
 		flex:1,
-		marginTop:64,
-		marginBottom:44,
+	
 
 	},
 

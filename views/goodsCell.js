@@ -1,5 +1,7 @@
 
 var React = require('react-native');
+var Lightbox = require('react-native-lightbox');
+
 
 var {
 	View,
@@ -15,8 +17,12 @@ module.exports = React.createClass({
 		return (
 		    <TouchableHighlight style={styles.mask} onPress={this.props.onSelect} underlayColor='#fff'>
                 	<View style={{flexDirection:'column'}}>
+                		<Lightbox navigator={this.props.navigator}>
+                			 <Image style={styles.image_style} source={{uri:'http://111.122.209.83:211/'+good.picture}}></Image>
 
-                		<Image style={styles.image_style} source={{uri:'http://111.122.209.83:211/'+good.picture}}></Image>
+
+                		</Lightbox>
+
                 		<View style={styles.bottom}>
                 		     <Text style={styles.font_word}>{good.goods_name}</Text>
 
@@ -52,6 +58,7 @@ var styles = React.StyleSheet.create({
 	 	height:200,
 	 	flex:1,
 	 	backgroundColor:'#ccc',
+	 	//resizeMode:'stretch',
 
 	 },
 	 font_word:{

@@ -55,7 +55,7 @@ var HelloWorld = React.createClass({
 
          <TabBarIOS.Item accessibilityLabel= {"Two"}
               selected={this.state.selectedTab ==='mapNav'}
-              title='地图导航'
+              title='小功能'
               name='mapNav'
               icon={{uri:'icon_index_navigation',isStatic:true}}
               onPress={() => {
@@ -66,7 +66,7 @@ var HelloWorld = React.createClass({
 
               <NavigatorIOS style={styles.container}
                   tintColor={'#333344'}
-                  initialRoute={{title:'地图导航',
+                  initialRoute={{title:'小功能',
                                  component:require('./mapNav.js')}
                                }
                   itemWrapperStyle={styles.navigator}>
