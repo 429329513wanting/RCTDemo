@@ -8,7 +8,6 @@ var{
   StyleSheet,
   StatusBarIOS
 } = React;
-StatusBarIOS.setHidden(true);
 module.exports = React.createClass({
   render: function(){
     var holiday = {

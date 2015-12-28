@@ -21,6 +21,9 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		6203C5191C2CD6EE0085559D /* libAIBSQLite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6203C50D1C2CD6CF0085559D /* libAIBSQLite.a */; };
+		6203C54E1C2D43A20085559D /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6203C54D1C2D43A20085559D /* libsqlite3.tbd */; };
+		6203C55A1C2D4A1A0085559D /* iphone.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 6203C5591C2D4A1A0085559D /* iphone.sqlite */; };
 		62732B841C1FEF58001C2911 /* libSafariViewManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62732B831C1FEF1F001C2911 /* libSafariViewManager.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 /* End PBXBuildFile section */
@@ -89,6 +92,13 @@
 			remoteGlobalIDString = 83CBBA2E1A601D0E00E9B192;
 			remoteInfo = React;
 		};
+		6203C50C1C2CD6CF0085559D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6203C5081C2CD6CF0085559D /* AIBSQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E23D7B471ACEFE2A00C59171;
+			remoteInfo = AIBSQLite;
+		};
 		62732B821C1FEF1F001C2911 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 62732B741C1FEF1F001C2911 /* SafariViewManager.xcodeproj */;
@@ -132,6 +142,9 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = RCTDemo/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RCTDemo/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		6203C5081C2CD6CF0085559D /* AIBSQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AIBSQLite.xcodeproj; path = "../node_modules/react-native-sqlite/AIBSQLite.xcodeproj"; sourceTree = "<group>"; };
+		6203C54D1C2D43A20085559D /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		6203C5591C2D4A1A0085559D /* iphone.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = iphone.sqlite; sourceTree = "<group>"; };
 		62732B741C1FEF1F001C2911 /* SafariViewManager.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SafariViewManager.xcodeproj; path = "../node_modules/react-native-safari-view/SafariViewManager.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
@@ -149,6 +162,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6203C54E1C2D43A20085559D /* libsqlite3.tbd in Frameworks */,
+				6203C5191C2CD6EE0085559D /* libAIBSQLite.a in Frameworks */,
 				62732B841C1FEF58001C2911 /* libSafariViewManager.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
@@ -261,6 +276,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		6203C5091C2CD6CF0085559D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6203C50D1C2CD6CF0085559D /* libAIBSQLite.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		62732B751C1FEF1F001C2911 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +303,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				6203C5081C2CD6CF0085559D /* AIBSQLite.xcodeproj */,
 				62732B741C1FEF1F001C2911 /* SafariViewManager.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -306,6 +330,8 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				6203C5591C2D4A1A0085559D /* iphone.sqlite */,
+				6203C54D1C2D43A20085559D /* libsqlite3.tbd */,
 				13B07FAE1A68108700A75B9A /* RCTDemo */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* RCTDemoTests */,
@@ -390,6 +416,10 @@
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = 6203C5091C2CD6CF0085559D /* Products */;
+					ProjectRef = 6203C5081C2CD6CF0085559D /* AIBSQLite.xcodeproj */;
+				},
 				{
 					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
 					ProjectRef = 00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */;
@@ -500,6 +530,13 @@
 			remoteRef = 146834031AC3E56700842450 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		6203C50D1C2CD6CF0085559D /* libAIBSQLite.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAIBSQLite.a;
+			remoteRef = 6203C50C1C2CD6CF0085559D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		62732B831C1FEF1F001C2911 /* libSafariViewManager.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -537,6 +574,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				6203C55A1C2D4A1A0085559D /* iphone.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

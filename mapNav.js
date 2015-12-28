@@ -3,6 +3,7 @@ var React = require('react-native');
 var Saf = require('react-native-safari-view');
 var CusView = require('./UICom/CustomView');
 var CalView = require('./UICom/calendarView');
+var DBView = require('./views/queryDBView');
 var isClick = false;
 
 
@@ -121,6 +122,14 @@ var mapView = React.createClass({
 
 					</View>
 
+					<View style={Style.item_style}>
+
+						<TouchableHighlight underlayColor='#fff' onPress={this._gotoDBView}>
+							<Text style={Style.font_16}>数据库读取</Text>
+						</TouchableHighlight>
+
+					</View>
+
 		       </ScrollView>
 		       )
 
@@ -161,6 +170,15 @@ var mapView = React.createClass({
         isClick = !isClick;
 
 		this.setState({isClick:isClick});
+	},
+	_gotoDBView(){
+
+		this.props.navigator.push({
+			title:'读取数据',
+			component:DBView,
+		});
+
+
 	},
 	
 

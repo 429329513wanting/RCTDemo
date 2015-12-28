@@ -12,7 +12,10 @@ var {
   View,
   TabBarIOS,
   NavigatorIOS,
+  StatusBarIOS,
 } = React;
+
+StatusBarIOS.setHidden(false);
 
 
 var HelloWorld = React.createClass({
