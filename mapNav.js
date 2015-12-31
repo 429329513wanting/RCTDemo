@@ -4,6 +4,9 @@ var Saf = require('react-native-safari-view');
 var CusView = require('./UICom/CustomView');
 var CalView = require('./UICom/calendarView');
 var DBView = require('./views/queryDBView');
+//var MapView = require('./views/mapView');
+
+var NAUtil = require('react-native').NativeModules.NAUtilManager;
 var isClick = false;
 
 
@@ -130,6 +133,24 @@ var mapView = React.createClass({
 
 					</View>
 
+					<View style={Style.item_style}>
+
+						<TouchableHighlight underlayColor='#fff' onPress={this._nativeMethod}>
+							<Text style={Style.font_16}>JSgreetOC</Text>
+						</TouchableHighlight>
+
+					</View>
+
+					<View style={Style.item_style}>
+
+						<TouchableHighlight underlayColor='#fff' onPress={this._ocCallback}>
+							<Text style={Style.font_16}>OCCallbackJS</Text>
+						</TouchableHighlight>
+
+					</View>
+
+		
+
 		       </ScrollView>
 		       )
 
@@ -180,6 +201,26 @@ var mapView = React.createClass({
 
 
 	},
+	_nativeMethod(){
+
+		NAUtil.sayHello("my name is js,what is you name");
+
+
+	},
+	_ocCallback(){
+
+		NAUtil.fromOCGreet((error,result) => {
+
+			if (error) {
+
+				alert("OC is not your friend");
+
+			}else{
+				alert(result.greet+'\n'+result.info);
+			}
+		});
+	},
+
 	
 
 });

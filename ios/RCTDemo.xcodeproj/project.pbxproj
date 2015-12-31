@@ -24,6 +24,7 @@
 		6203C5191C2CD6EE0085559D /* libAIBSQLite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6203C50D1C2CD6CF0085559D /* libAIBSQLite.a */; };
 		6203C54E1C2D43A20085559D /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6203C54D1C2D43A20085559D /* libsqlite3.tbd */; };
 		6203C55A1C2D4A1A0085559D /* iphone.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 6203C5591C2D4A1A0085559D /* iphone.sqlite */; };
+		6250ED651C325FBF00ECF111 /* NAUtilManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6250ED641C325FBF00ECF111 /* NAUtilManager.m */; };
 		62732B841C1FEF58001C2911 /* libSafariViewManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62732B831C1FEF1F001C2911 /* libSafariViewManager.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 /* End PBXBuildFile section */
@@ -145,6 +146,8 @@
 		6203C5081C2CD6CF0085559D /* AIBSQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AIBSQLite.xcodeproj; path = "../node_modules/react-native-sqlite/AIBSQLite.xcodeproj"; sourceTree = "<group>"; };
 		6203C54D1C2D43A20085559D /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		6203C5591C2D4A1A0085559D /* iphone.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = iphone.sqlite; sourceTree = "<group>"; };
+		6250ED631C325FBF00ECF111 /* NAUtilManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAUtilManager.h; sourceTree = "<group>"; };
+		6250ED641C325FBF00ECF111 /* NAUtilManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAUtilManager.m; sourceTree = "<group>"; };
 		62732B741C1FEF1F001C2911 /* SafariViewManager.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SafariViewManager.xcodeproj; path = "../node_modules/react-native-safari-view/SafariViewManager.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
@@ -257,6 +260,8 @@
 		13B07FAE1A68108700A75B9A /* RCTDemo */ = {
 			isa = PBXGroup;
 			children = (
+				6250ED661C326D9700ECF111 /* NAUIComponents */,
+				6250ED561C325F7E00ECF111 /* NAUtil */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -282,6 +287,24 @@
 				6203C50D1C2CD6CF0085559D /* libAIBSQLite.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		6250ED561C325F7E00ECF111 /* NAUtil */ = {
+			isa = PBXGroup;
+			children = (
+				6250ED631C325FBF00ECF111 /* NAUtilManager.h */,
+				6250ED641C325FBF00ECF111 /* NAUtilManager.m */,
+			);
+			name = NAUtil;
+			path = RCTDemo/NAUtil;
+			sourceTree = "<group>";
+		};
+		6250ED661C326D9700ECF111 /* NAUIComponents */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = NAUIComponents;
+			path = RCTDemo/NAUIComponents;
 			sourceTree = "<group>";
 		};
 		62732B751C1FEF1F001C2911 /* Products */ = {
@@ -612,6 +635,7 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				6250ED651C325FBF00ECF111 /* NAUtilManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

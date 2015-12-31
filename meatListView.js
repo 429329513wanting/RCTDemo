@@ -38,11 +38,13 @@ var meatListView = React.createClass({
 
 		var type = this.props.type
 		if (type == 'meat') {
+			var bodyStr = JSON.stringify({oid:"f2573e864e49d503014e58c10c170165",order:"asc",orderType:"0",pageNumber:"1",pageSize:"20"});
+
 
 		fetch('http://www.zhcc717.com/market/mobile/goodsList.do',{
 		method:'POST',
 	    headers:{"Content-Type":"application/json"},
-	    body:"oid=f2573e864e49d503014e58c1d18a017b&order=asc&orderType=0&pageNumber=1&pageSize=20"})
+	    body:bodyStr})
 
 		   .then((response) => response.json())
 
@@ -65,10 +67,13 @@ var meatListView = React.createClass({
 
 		}else{
 
+			var bodyStr = JSON.stringify({oid:"f2573e864e49d503014e58c10c170165",order:"asc",orderType:"0",pageNumber:"1",pageSize:"20"});
+
 		fetch('http://www.zhcc717.com/market/mobile/goodsList.do',{
 		method:'POST',
 	    headers:{"Content-Type":"application/json"},
-	    body:"oid=f2573e864e49d503014e58c10c170165&order=asc&orderType=0&pageNumber=1&pageSize=20"})
+	    //"oid=f2573e864e49d503014e58c10c170165&order=asc&orderType=0&pageNumber=1&pageSize=20"
+	    body:bodyStr})
 
 		   .then((response) => response.json())
 
